@@ -39,6 +39,7 @@ import {
   getTweetsByUserId,
   TweetQuery,
   getTweet,
+  getTweetThread,
   fetchListTweets,
   getTweetsAndRepliesByUserId,
   getTweetsAndReplies,
@@ -553,6 +554,18 @@ export class Scraper {
   public getTweet(id: string): Promise<Tweet | null> {
     if (this.auth instanceof TwitterUserAuth) {
       return getTweet(id, this.auth);
+    } else {
+      return getTweetAnonymous(id, this.auth);
+    }
+  }
+  /**
+   * Fetches the thread of tweet.
+   * @param id The ID of the tweet to fetch.
+   * @returns The {@link Tweet} object, or `null` if it couldn't be fetched.
+   */
+  public getTweetThread(id: string): Promise<Tweet[] | Tweet | null> {
+    if (this.auth instanceof TwitterUserAuth) {
+      return getTweetThread(id, this.auth);
     } else {
       return getTweetAnonymous(id, this.auth);
     }
