@@ -777,7 +777,7 @@ export async function getTweetThread(
   }
 
   const tweets = parseThreadedConversation(res.value);
-  return tweets ?? null;
+  return tweets.filter((tweet) => tweet.conversationId === id) ?? null;
 }
 
 export async function getTweetV2(

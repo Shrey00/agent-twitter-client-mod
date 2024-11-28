@@ -1,8 +1,8 @@
 {
-  "name": "agent-twitter-client",
+  "name": "agent-twitter-mod",
   "description": "A twitter client for agents",
   "keywords": [],
-  "version": "0.0.16",
+  "version": "0.0.17",
   "main": "dist/default/cjs/index.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
@@ -70,5 +70,13 @@
       "eslint --cache --fix",
       "prettier --write"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shrey00/agent-twitter-client-mod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shrey00/agent-twitter-client-mod/issues"
+  },
+  "homepage": "https://github.com/Shrey00/agent-twitter-client-mod#readme"
 }

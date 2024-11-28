@@ -1,14 +1,16 @@
-import { Scraper } from 'agent-twitter-client';
-import dotenv from 'dotenv';
+// import { Scraper } from 'agent-twitter-client';
+// import dotenv from 'dotenv';
+const dotenv = require('dotenv')
+const {Scraper} = require('agent-twitter-mod')
 dotenv.config();
 
 async function main() {
-  // const scraper = new Scraper();
-  // // v1 login
-  // await scraper.login(
-  //   process.env.TWITTER_USERNAME,
-  //   process.env.TWITTER_PASSWORD,
-  // );
+  const scraper = new Scraper();
+  // v1 login
+  await scraper.login(
+    process.env.TWITTER_USERNAME,
+    process.env.TWITTER_PASSWORD,
+  );
   // // v2 login
   // await scraper.login(
   //   process.env.TWITTER_USERNAME,
@@ -37,7 +39,7 @@ async function main() {
   //     },
   //   },
   // );
-  // console.log(await scraper.getTweet('1856441982811529619'));
+  console.log(await scraper.getTweetThread('1862351024071041402'));
   // const tweet = await scraper.getTweetV2('1856441982811529619');
   // console.log({ tweet });
   // console.log('tweet', tweet);
