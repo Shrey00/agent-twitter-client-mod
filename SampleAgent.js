@@ -39,7 +39,7 @@ async function main() {
   //     },
   //   },
   // );
-  console.log(await scraper.getTweetThread('1862351024071041402'));
+  console.log(await scraper.getTweetThread('1861842866592686548'));
   async function postTweetWithImage(
     imgUrl,
     replyText,
@@ -53,14 +53,14 @@ async function main() {
       console.log("BUFFER")
       console.log("TWEET_ID", tweetId)
       console.log(imgBuffer)
-      const response = await scraper.sendTweetWithMedia(replyText, tweetId  );
+      const response = await scraper.sendTweetWithMedia(replyText, [imgBuffer], tweetId);
       const responseData = await  response.json();
       console.log(responseData);
     } catch (e) {
       console.log(e);
     }
   }
-  postTweetWithImage('https://i.insider.com/562a71f9dd0895a8388b4593?width=700','Another one','1862332893839683665');
+  postTweetWithImage('https://i.insider.com/562a71f9dd0895a8388b4593?width=700','Testing img upload','1861842866592686548');
   // const tweet = await scraper.getTweetV2('1856441982811529619');
   // console.log({ tweet });
   // console.log('tweet', tweet);
