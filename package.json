@@ -2,7 +2,7 @@
   "name": "agent-twitter-mod",
   "description": "A twitter client for agents",
   "keywords": [],
-  "version": "0.0.17",
+  "version": "0.0.14",
   "main": "dist/default/cjs/index.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
